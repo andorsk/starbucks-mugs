@@ -189,7 +189,7 @@
         ]
     },
     "Manila": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 Manila",
         "url": "https://starbucks-mugs.com/mug/been-there-manila/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2020/03/bt_manila_1_main.jpg",
@@ -200,7 +200,7 @@
         ]
     },
     "Philippines": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 Philippines",
         "url": "https://starbucks-mugs.com/mug/been-there-philippines/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2020/02/bt_philippines_v1_main.jpg",
