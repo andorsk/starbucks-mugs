@@ -1253,7 +1253,7 @@
     "url": "https://starbucks-mugs.com/mug/been-there-san-jose/",
     "img": "https://starbucks-mugs.com/wp-content/uploads/2019/10/bt_san_jose_1-407x308.jpg",
     "description": "\nStarbucks Been There \u2013 San Jos\u00e9 is the mug for the capital and largest city of Costa Rica. The architecture was chosen as the main motive of the design. Here\u2019s what I was able to identify:\n\u2013 There is a statue of Le\u00f3n Cort\u00e9s Castro on the side of the mug. He served as President of Costa Rica from 1936 to 1940. He is remembered for introducing important bank and agrarian reforms. His construction projects include the former International Airport of La Sabana.\u2026 Read more \n",
-    "latlong": [37.33874, -121.8852525]
+    "latlong": [9.9281, -84.0907]
   },
   "Costa Rica": {
     "owned": false,
@@ -1544,7 +1544,7 @@
     "latlong": [42.3600825, -71.0588801]
   },
   "Los Angeles": {
-    "owned": true,
+    "owned": false,
     "title": "Been There \u2013 Los Angeles",
     "url": "https://starbucks-mugs.com/mug/been-there-los-angeles/",
     "img": "https://starbucks-mugs.com/wp-content/uploads/2018/04/bt_los_angeles-407x343.jpg",
@@ -1806,7 +1806,7 @@
     "latlong": [32.715738, -117.1610838]
   },
   "Los Angeles 2": {
-    "owned": false,
+    "owned": true,
     "title": "Been There \u2013 Los Angeles 2",
     "url": "https://starbucks-mugs.com/mug/been-there-los-angeles-2/",
     "img": "https://starbucks-mugs.com/wp-content/uploads/2018/05/bt_los_angeles_2_1-407x349.jpg",
