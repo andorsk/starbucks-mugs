@@ -24,12 +24,18 @@ total_count = len(data.keys())
 
 for c, d in data.items():
     tooltip = c
-    if 'img' not in d or 'url' not in d or 'description' not in d or 'latlong' not in d:
-        continue
     if d.get('owned') is True:
         owned_count += 1
-    description = f'<img src="{d["img"]}" width="200"><br><a href="{d["url"]}">Link</a><br>{d["description"]}'
-    iframe = folium.IFrame(description, width=250, height=300)
+
+    if 'latlong' not in d:
+        continue
+
+    imgPath = d.get('img', "")
+    url = d.get('url', "")
+    description = d.get('description', "")
+
+    markerData = f'<img src="{imgPath}" width="200"><br><a href="{url}">Link</a><br>{description}'
+    iframe = folium.IFrame(markerData, width=250, height=300)
     popup = folium.Popup(iframe, max_width=300)
     c = 'green' if d['owned'] is True else 'orange'
     icon_image = modify_and_encode_svg('./icon.svg', c)
