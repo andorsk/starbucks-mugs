@@ -19,11 +19,15 @@ data = json.load(f)
 # Initialize a map centered around the first city in the list
 m = folium.Map(location=data[list(data.keys())[0]]["latlong"], zoom_start=4)
 
-# Iterate over each city in the data list
+owned_count = 0
+total_count = len(data.keys())
+
 for c, d in data.items():
     tooltip = c
     if 'img' not in d or 'url' not in d or 'description' not in d or 'latlong' not in d:
         continue
+    if d.get('owned') is True:
+        owned_count += 1
     description = f'<img src="{d["img"]}" width="200"><br><a href="{d["url"]}">Link</a><br>{d["description"]}'
     iframe = folium.IFrame(description, width=250, height=300)
     popup = folium.Popup(iframe, max_width=300)
@@ -38,4 +42,6 @@ for c, d in data.items():
         tooltip=tooltip
     ).add_to(m)
 
+header_html = f"<div style='position: fixed; top: 10px; left: 50px; width: 300px; height: 20px; background-color: white; z-index:9999; font-size:16px;'><b>Owned: {owned_count} / Total: {total_count}</b></div>"
+m.get_root().html.add_child(folium.Element(header_html))
 m.save('index.html')
