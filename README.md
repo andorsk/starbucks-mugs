@@ -26,4 +26,10 @@ Thank you to starbucks-mugs.com for providing the data. Uses GoogleAPI for geoco
 1. `python -m pip install -r requirements.txt`: Download reqs
 2. `python starbucks-mugs.py update` to update the data.
 
+## Contributing
 
+Want to contribute? Please do! This was for personal use. Feel free to fork the code. 
+
+## How to create for yourself? 
+
+Just fork this repo and change the data/owned_mugs.txt, add the GOOGLE_MAPS_API_KEY to the repo settings, and you should be good to go
