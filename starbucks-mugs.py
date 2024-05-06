@@ -9,8 +9,9 @@ import json
 import folium
 import base64
 import argparse
+import copy
 
-API_KEY = os.environ.get('GOOGLE_MAPS_API_KEY')
+GOOGLE_MAPS_API_KEY = os.environ.get('GOOGLE_MAPS_API_KEY')
 
 def modify_and_encode_svg(svg_path, new_color):
     with open(svg_path, 'r') as file:
@@ -27,34 +28,36 @@ def visualize(data_path, output_path="index.html"):
     m = folium.Map(location=data[list(data.keys())[0]]["latlong"], zoom_start=4)
     owned_count = 0
     total_count = len(data.keys())
+    print("got total count", total_count)
     for c, d in data.items():
         tooltip = c
         if d.get('owned') is True:
             owned_count += 1
-            if 'latlong' not in d:
-                continue
-            imgPath = d.get('img', "")
-            url = d.get('url', "")
-            description = d.get('description', "")
-            markerData = f'<img src="{imgPath}" width="200"><br><a href="{url}">Link</a><br>{description}'
-            iframe = folium.IFrame(markerData, width=250, height=300)
-            popup = folium.Popup(iframe, max_width=300)
-            c = 'green' if d['owned'] is True else 'orange'
-            icon_image = modify_and_encode_svg('./assets/icon.svg', c)
-            icon = folium.CustomIcon(icon_image, icon_size=(30, 30))  # Adjust size as needed
-            folium.Marker(
+        if 'latlong' not in d:
+            print("can't find latlong")
+            continue
+
+        imgPath = d.get('img', "")
+        url = d.get('url', "")
+        description = d.get('description', "")
+        markerData = f'<img src="{imgPath}" width="200"><br><a href="{url}">Link</a><br>{description}'
+        iframe = folium.IFrame(markerData, width=250, height=300)
+        popup = folium.Popup(iframe, max_width=300)
+        color = 'green' if d['owned'] is True else 'orange'
+        icon_image = modify_and_encode_svg('./assets/icon.svg', color)
+        icon = folium.CustomIcon(icon_image, icon_size=(30, 30))  # Adjust size as needed
+        folium.Marker(
                 location=d["latlong"],
                 popup=popup,
                 icon=icon,
                 fill_opacity=0.6,
                 tooltip=tooltip
-            ).add_to(m)
+        ).add_to(m)
 
     footer_html = f"<div style='position: fixed; bottom: 10px; height: 20px; background-color: white; z-index:9999; font-size:16px;'>Credit to <a href='https://starbucks-mugs.com/category/been-there/'>starbucks-mugs.com</a> for the initial seed data. See scripts at my <a href='https://github.com/andorsk/starbucks-mugs.git'>Github</a></div>"
     header_html = f"<div style='position: fixed; top: 10px; left: 50px; width: 300px; height: 20px; background-color: white; z-index:9999; font-size:16px;'><b>Owned: {owned_count} / Total: {total_count}</b></div>"
     m.get_root().html.add_child(folium.Element(header_html))
     m.get_root().html.add_child(folium.Element(footer_html))
-
     m.save(output_path)
 
 def read_json(file_path):
@@ -63,11 +66,9 @@ def read_json(file_path):
     return data
 
 def update(new, old):
-    lat_long_overrides = {}
     ret = {}
 
     for key, oldEntry in old.items():
-        lat_long_overrides[key] = oldEntry.get('latlong')
         newEntry = new.get(key)
         if newEntry is None:
             ret[key] = oldEntry
@@ -90,7 +91,7 @@ def modify_and_encode_svg(svg_path, new_color):
 
 
 def fetch_complete_list():
-    pages = 36
+    pages = 1 #36
     all_titles = []
     base_url = 'https://starbucks-mugs.com/category/been-there/'
     for page in range(1, pages + 1):
@@ -122,7 +123,7 @@ def fetch_url(url):
     return titles
 
 def read_owned():
-    with open('./owned_mugs.txt', 'r') as file:
+    with open('./data/owned_mugs.txt', 'r') as file:
         owned = file.readlines()
     return [line.strip() for line in owned]
 
@@ -134,6 +135,7 @@ def read_latlong_overrides():
 def get_latlong(address, api_key=''):
     base_url = 'https://maps.googleapis.com/maps/api/geocode/json'
     endpoint = f"{base_url}address={address}&key={api_key}"
+    print("trying to fetch latlong for", endpoint)
     params = {'sensor': 'false', 'address': address, 'key': api_key}
     resp = requests.get(base_url, params=params)
     if resp.status_code != 200:
@@ -148,49 +150,69 @@ def get_latlong(address, api_key=''):
     time.sleep(1) # for rate limiting
     return [lat, lng]
 
-def prepare():
+def prepare(previous_data_path, output_file_path):
+
     owned_mugs = read_owned()
     latlong_overrides = read_latlong_overrides()
     all_titles = fetch_complete_list()
     data = {}
-    for title in all_titles:
-        data[title['title']] = {
-            'owned': title['title'] in owned_mugs,
-            **title
-        }
-    for m in owned_mugs:
-        if m not in data:
-            data[m] = {
-                'owned': True
+    previous_data = {}
+
+    if previous_data_path:
+        previous_data = read_json(previous_data_path)
+        data = copy.deepcopy(previous_data)
+
+    def insert_owned_mugs(data):
+        # update the titles of ownership
+        for title in all_titles:
+            data[title['title']] = {
+                'owned': title['title'] in owned_mugs,
+                **title
             }
+            for m in owned_mugs:
+                if m not in data:
+                    data[m] = {
+                        'owned': True
+                    }
+        return data
 
-    updated = {}
-    # clean keys
-    for k, v in data.items():
-        print(k)
-        try:
-            new_key = k.split("–")[1]
-            new_key = new_key.strip()
-            updated[new_key] = v
-        except Exception as e:
-            print("Failed to clean key", k)
-            print(e)
+    def clean_keys(data):
+        updated = {}
+        for k, v in data.items():
+            print(k)
+            try:
+                new_key = k.split("–")[1]
+                new_key = new_key.strip()
+                updated[new_key] = v
+            except Exception as e:
+                print("Failed to clean key", k)
+                print(e)
+        return updated
 
-    data = updated
-    # get addresses
-    for k in data.keys():
-        try:
-            if k in latlong_overrides:
-                data[k]['latlong'] = latlong_overrides[k]
-            else:
-                data[k]['latlong'] = get_latlong(k)
-        except Exception as e:
-            print(f"Failed to get latlong for {k}")
-            print(e)
+    def get_addresses(data):
+        for k in data.keys():
+            try:
+                if k in latlong_overrides:
+                    data[k]['latlong'] = latlong_overrides[k]
+                    print("using override for", k)
+                else:
+                    data[k]['latlong'] = get_latlong(k, GOOGLE_MAPS_API_KEY)
+            except Exception as e:
+                print(f"Failed to get latlong for {k}")
+                print(e)
+        return data
 
-    with open('final_data.json', 'w') as file:
+    data = insert_owned_mugs(data)
+    data = clean_keys(data)
+    data = get_addresses(data)
+    data = update(previous_data, data)
+    with open(output_file_path, 'w') as file:
         json.dump(data, file, indent=4)
 
+def backup(input_file, output_file):
+    data = read_json(input_file)
+    with open(output_file, 'w') as file:
+        json.dump(data, file, indent=4)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="CLI for data manipulation tasks")
@@ -204,25 +226,29 @@ if __name__ == "__main__":
     # Prepare command
     prepare_parser = subparsers.add_parser("prepare", help="Prepare data")
     prepare_parser.add_argument("--output", required=True, help="Output file")
-
-    # Cleanup command
-    cleanup_parser = subparsers.add_parser("cleanup", help="Cleanup old and new files")
-    cleanup_parser.add_argument("--old-input", default="final_data.json.bak", help="Old input file (default: final_data.json.bak)")
-    cleanup_parser.add_argument("--new-input", default="final_data.json", help="New input file (default: final_data.json)")
-    cleanup_parser.add_argument("--output", default="final_data.json", help="Output file (default: final_data.json)")
+    prepare_parser.add_argument("--previous", required=False, help="Previous Data File", default="final_data.json")
 
     # Visualize command
     visualize_parser = subparsers.add_parser("visualize", help="Visualize data")
     visualize_parser.add_argument("--input", default="final_data.json", help="Input file (default: final_data.json)")
     visualize_parser.add_argument("--output", default="index.html", help="Output file (default: index.html)")
 
+    update_parser = subparsers.add_parser("update", help="update data")
+    update_parser.add_argument("--backup_path", default="data/final_data.json.bak", help="backup file")
+    update_parser.add_argument("--output", required=False, help="Output file", default="index.html")
+    update_parser.add_argument("--previous", required=False, help="Previous Data File", default="data/final_data.json")
     args = parser.parse_args()
 
     if args.command == "backup":
         backup(args.input, args.output)
     elif args.command == "prepare":
-        prepare(args.output)
-    elif args.command == "cleanup":
-        cleanup(args.old_input, args.new_input, args.output)
+        prepare(args.previous, args.output)
     elif args.command == "visualize":
         visualize(args.input, args.output)
+    elif args.command == "update":
+        # backup old data with .bak
+        backup(args.previous, args.backup_path)
+        # preapare new file. overwriting the new one
+        prepare(args.previous, args.previous)
+        # create the html
+        visualize(args.previous, args.output)
