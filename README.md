@@ -13,7 +13,7 @@ Thank you to starbucks-mugs.com for providing the data. Uses GoogleAPI for geoco
 
 - [ ] Must be bought at a Starbucks. i.e no ordering online. 
 - [ ] Must have visited the location and outside of the airport of the location. i.e layovers don't count. 
-- [ ] You MAY ask a friend, not a stranger, to pick it up for you, as long as they follow the previous two criteria. They must bring it to you personally. 
+- [ ] You MAY ask a friend, not a stranger, to pick it up for you, as long as both of you follow the previous two criteria. They must bring it to you personally. 
 
 ## Environment Variables
 
