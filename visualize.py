@@ -48,6 +48,9 @@ for c, d in data.items():
         tooltip=tooltip
     ).add_to(m)
 
+footer_html = f"<div style='position: fixed; bottom: 10px; height: 20px; background-color: white; z-index:9999; font-size:16px;'>Credit to <a href='https://starbucks-mugs.com/category/been-there/'>starbucks-mugs.com</a> for the initial seed data. See scripts at my <a href='https://github.com/andorsk/starbucks-mugs.git'>Github</a></div>"
 header_html = f"<div style='position: fixed; top: 10px; left: 50px; width: 300px; height: 20px; background-color: white; z-index:9999; font-size:16px;'><b>Owned: {owned_count} / Total: {total_count}</b></div>"
 m.get_root().html.add_child(folium.Element(header_html))
+m.get_root().html.add_child(folium.Element(footer_html))
+
 m.save('index.html')
