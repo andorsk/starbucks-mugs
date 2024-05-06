@@ -40,7 +40,7 @@ def visualize(data_path, output_path="index.html"):
             iframe = folium.IFrame(markerData, width=250, height=300)
             popup = folium.Popup(iframe, max_width=300)
             c = 'green' if d['owned'] is True else 'orange'
-            icon_image = modify_and_encode_svg('./icon.svg', c)
+            icon_image = modify_and_encode_svg('./assets/icon.svg', c)
             icon = folium.CustomIcon(icon_image, icon_size=(30, 30))  # Adjust size as needed
             folium.Marker(
                 location=d["latlong"],
