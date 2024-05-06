@@ -32,4 +32,4 @@ Want to contribute? Please do! This was for personal use. Feel free to fork the 
 
 ## How to create for yourself? 
 
-Just fork this repo and change the data/owned_mugs.txt, add the GOOGLE_MAPS_API_KEY to the repo settings, and you should be good to go
+Just fork this repo and change the `data/owned_mugs.txt`, add set `GOOGLE_MAPS_API_KEY` as a secret in your repo settings, and you should be good to go
