@@ -15,7 +15,7 @@ Been There – Portland
 Been There – Lake Tahoe
 Been There – Pittsburgh
 Been There – Seattle
-Been There – Los Angeles
+Been There – Los Angeles 2
 Been There – Las Vegas
 Been There – Vancouver
 Been There – Austin
@@ -33,8 +33,8 @@ Been There – Dubai
 Been There – Izmir
 Been There – Santa Barbara
 Been There – United Arab Emirates
-Been There – Phillipines
-Been There – Manilla
+Been There – Philippines
+Been There – Manila
 Been There – University of Southern California
 Been There – Buenos Aires
 Been There – Punta del Este
