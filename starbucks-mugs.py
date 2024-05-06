@@ -91,7 +91,7 @@ def modify_and_encode_svg(svg_path, new_color):
 
 
 def fetch_complete_list():
-    pages = 1 #36
+    pages = 36
     all_titles = []
     base_url = 'https://starbucks-mugs.com/category/been-there/'
     for page in range(1, pages + 1):
