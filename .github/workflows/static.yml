@@ -46,7 +46,7 @@ jobs:
 
       - name: Update the data
         run: |
-          python update.py
+          python starbucks-mugs.py update
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
