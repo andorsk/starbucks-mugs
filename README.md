@@ -23,11 +23,7 @@ Thank you to starbucks-mugs.com for providing the data. Uses GoogleAPI for geoco
 
 ## Usage
 
-1. `prepare.py`: to get the encoded data and prepare the final_data.json file
-2. `visualize.py`: to generate the map
+1. `python -m pip install -r requirements.txt`: Download reqs
+2. `python starbucks-mugs.py update` to update the data.
 
-
-# TODO
-
-- [ ] Automatically scrape and clean the data so it runs every day. Add it to Github Actions.
 
