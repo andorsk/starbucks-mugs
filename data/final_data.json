@@ -1,4 +1,150 @@
 {
+    "New York\\u00a0City": {
+        "owned": true
+    },
+    "Guangzhou": {
+        "owned": false,
+        "title": "Been There \u2013 Guangzhou",
+        "url": "https://starbucks-mugs.com/mug/been-there-guangzhou/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2022/08/bt_Guangzhou_main.jpg",
+        "latlong": [
+            23.1291,
+            113.2644
+        ],
+        "description": "\nMuch like most of the Chinese mugs from this series, Starbucks Been There \u2013 Guangzhou is an older release that I had no chance to review just yet.\nGuangzhou is one of the oldest cities in the country. Its origins date back over 2,200 years to the Qin Dynasty, when it was established as a trading port. It became a crucial hub during the Tang and Song Dynasties, connecting China to the Maritime Silk Road and facilitating cultural and commercial exchanges with Southeast Asia, the Middle East, and beyond.\u2026 Read more \n"
+    },
+    "Nagano": {
+        "owned": false,
+        "title": "Been There \u2013 Nagano",
+        "url": "https://starbucks-mugs.com/mug/been-there-nagano/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2021/10/bt_nagano_main.jpg",
+        "latlong": [
+            36.6485,
+            138.195
+        ],
+        "description": "\nStarbucks Been There \u2013 Nagano is a mug for a prefecture located in the Ch\u016bbu region of Japan. Originally settled in prehistoric times, Nagano played a significant role during the Sengoku period (1467-1615) as a strategic location for several prominent feudal lords. The area\u2019s historical prominence was further highlighted by the construction of the famous Zenko-ji Temple in the 7th century, which became a major pilgrimage site. During the Edo period (1603-1868), Nagano thrived as a post town on the Nakasendo route, connecting Edo (modern-day Tokyo) with Kyoto.\u2026 Read more \n"
+    },
+    "Australia 2": {
+        "owned": false,
+        "title": "Been There \u2013 Australia 2",
+        "url": "https://starbucks-mugs.com/mug/been-there-australia-2/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2024/05/bt_australia_2_main.jpg",
+        "latlong": [
+            36.6485,
+            138.195
+        ],
+        "description": "\nAbsolutely out of nowhere, Starbucks revealed a new version of the mug released earlier. It seems that the design of\u00a0Been There \u2013 Australia 2 is entirely dedicated to surfing and anything related to it, and as you can see from the comparison picture below, there are pretty much no common elements between v1 and v2.\nIt is a well-known fact that surfing is deeply ingrained in Australian culture, reflecting the nation\u2019s close relationship with the ocean and its laid-back, outdoor lifestyle.\u2026 Read more \n"
+    },
+    "Nagasaki": {
+        "owned": false,
+        "title": "Been There \u2013 Nagasaki",
+        "url": "https://starbucks-mugs.com/mug/been-there-nagasaki/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2021/10/bt_nagasaki_main.jpg",
+        "latlong": [
+            32.7503,
+            129.8779
+        ],
+        "description": "\nStarbucks Been There \u2013 Nagasaki is a mug for a city on Japan\u2019s Kyushu island that has a rich history marked by periods of foreign influence and cultural exchange. As one of Japan\u2019s earliest ports open to foreign trade in the 16th century, Nagasaki became a hub for interactions with Portuguese and Dutch traders, significantly shaping the city\u2019s cultural and economic landscape. The city also played a crucial role in the spread of Christianity in Japan. Today, Nagasaki reflects its diverse historical influences through its architecture, traditions, and vibrant cultural heritage.\u2026 Read more \n"
+    },
+    "NC State": {
+        "owned": false,
+        "title": "Been There \u2013 NC State",
+        "url": "https://starbucks-mugs.com/mug/been-there-nc-state/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2024/06/bt_nc_state_main.jpg",
+        "latlong": [
+            35.7596,
+            -79.0193
+        ],
+        "description": "\nIt has been a while since I reviewed mugs from Campus Collection. Meanwhile, there were some interesting releases, and Starbucks Been There \u2013 NC State is one of them.\nNorth Carolina State University, founded in 1887 as a land-grant institution, began as the North Carolina College of Agriculture and Mechanic Arts. Located in Raleigh, it was established to provide practical education in agriculture and engineering. Over the decades, NC State expanded its academic offerings and research capabilities, becoming a comprehensive university.\u2026 Read more \n"
+    },
+    "Wuhan": {
+        "owned": false,
+        "title": "Been There \u2013 Wuhan",
+        "url": "https://starbucks-mugs.com/mug/been-there-wuhan/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2022/08/bt_Wuhan_main.jpg",
+        "description": "\nBeen There \u2013 Wuhan is a mug for the capital of Hubei province in central China, with a history dating back over 3,500 years. Originally a series of three towns\u2014Wuchang, Hankou, and Hanyang\u2014it became a pivotal site for trade and transportation due to its strategic location at the confluence of the Yangtze and Han rivers. Throughout Chinese history, Wuhan has been a center of political and military significance, notably during the 1911 Wuchang Uprising, which played a crucial role in the downfall of the Qing Dynasty and the establishment of the Republic of China.\u2026 Read more \n",
+        "latlong": [
+            30.5928,
+            114.3052
+        ]
+    },
+    "Osaka": {
+        "owned": false,
+        "title": "Been There \u2013 Osaka",
+        "url": "https://starbucks-mugs.com/mug/been-there-osaka/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2021/10/bt_osaka_main.jpg",
+        "latlong": [
+            34.6937,
+            135.5023
+        ],
+        "description": "\nStarbucks Been There \u2013 Osaka is a mug for one of Japan\u2019s major cities, that boasts a rich history dating back over 1,500 years. Originally known as Naniwa, it served as a bustling port and the nation\u2019s capital during the 7th and 8th centuries under the reigns of Emperor K\u014dtoku and Emperor Sh\u014dmu. The city played a pivotal role in Japan\u2019s maritime trade, connecting the country with the rest of Asia. During the Azuchi-Momoyama period in the late 16th century, Osaka Castle was constructed under the orders of Toyotomi Hideyoshi, a key figure in Japan\u2019s unification.\u2026 Read more \n"
+    },
+    "Xi\u2019an": {
+        "owned": false,
+        "title": "Been There \u2013 Xi\u2019an",
+        "url": "https://starbucks-mugs.com/mug/been-there-xian/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2022/08/bt_Xian_main.jpg",
+        "description": "\nHere is Been There \u2013 Xi\u2019an mug for one of China\u2019s oldest cities, a vibrant historical epicenter of the country. Once known as Chang\u2019an, it was the capital for several of China\u2019s most significant dynasties, including the Zhou, Qin, Han, and Tang. This city\u2019s historical prominence is epitomized by the famed Terracotta Army, which guards the tomb of Emperor Qin Shi Huang, the first Emperor of China. Xi\u2019an was also the eastern terminus of the Silk Road, facilitating cultural, commercial, and technological exchanges between East and West for centuries.\u2026 Read more \n",
+        "latlong": [
+            34.2658,
+            108.9541
+        ]
+    },
+    "Chengdu": {
+        "owned": false,
+        "title": "Been There \u2013 Chengdu",
+        "url": "https://starbucks-mugs.com/mug/been-there-chengdu/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2022/08/bt_Chengdu_main.jpg",
+        "description": "\nBeen There \u2013 Chengdu is the mug for the capital of Sichuan Province in southwestern China, boasts a rich historical legacy dating back over 4,000 years. As one of the cradles of Chinese civilization, it was a significant cultural and political center during the ancient Shu Kingdom, long before the Qin dynasty unified China. Archaeological discoveries, such as the Jinsha Site, have unearthed artifacts that testify to Chengdu\u2019s ancient prosperity and cultural richness. During the Han dynasty, Chengdu was known as a major hub of commerce and industry, particularly noted for its production of brocade, which earned it the nickname \u201cBrocade City.\u201d Throughout the Tang and Song dynasties, Chengdu continued to flourish as a cultural and literary center, contributing significantly to Chinese poetry and art.\u2026 Read more \n",
+        "latlong": [
+            30.5728,
+            104.0668
+        ]
+    },
+    "Xiamen": {
+        "owned": false,
+        "title": "Been There \u2013 Xiamen",
+        "url": "https://starbucks-mugs.com/mug/been-there-xiamen/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2022/08/bt_Xiamen_main.jpg",
+        "description": "\nStarbucks Been There \u2013 Xiamen is a mug for a coastal city in southeastern China. Historically known as Amoy, it emerged as a vital port during the Song Dynasty, flourishing through maritime trade. The city played a significant role during the Ming Dynasty as a defense base against pirates and later as a key site during the First Opium War. Its colonial legacy is evident in the Gulangyu Island, a UNESCO World Heritage site, reflecting a blend of Western and Eastern architectural styles.\u2026 Read more \n",
+        "location": [
+            24.4795,
+            118.0895
+        ]
+    },
+    "Shenzhen": {
+        "owned": false,
+        "title": "Been There \u2013 Shenzhen",
+        "url": "https://starbucks-mugs.com/mug/been-there-shenzhen/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2022/08/bt_Shenzhen_main.jpg",
+        "description": "\nStarbucks Been There \u2013 Shenzhen is a mug for a city, located in southern China, that has transformed itself from a small fishing village into a global technological hub. Known as the \u201cSilicon Valley of China,\u201d Shenzhen is home to numerous tech giants and startups, attracting innovators and entrepreneurs from around the world. With its stunning skyline, modern architecture, and bustling streets, the city offers a unique blend of tradition and modernity. Shenzhen is also renowned for its shopping destinations, cultural attractions, and diverse culinary scene.\u2026 Read more \n",
+        "latlong": [
+            22.5429,
+            114.0596
+        ]
+    },
+    "Kobe": {
+        "owned": false,
+        "title": "Been There \u2013 Kobe",
+        "url": "https://starbucks-mugs.com/mug/been-there-kobe/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2021/10/bt_kobe_main.jpg",
+        "description": "\nStarbucks Been There \u2013 Kobe is a mug for a prominent port city located on Osaka Bay in Japan, that has a rich history dating back to its establishment in the Nara period (710-794). During the 12th century, Kobe became a significant center for trade and commerce due to its strategic location. It was officially founded in 1868, the same year Japan opened its ports to foreign trade, marking the beginning of the Meiji era. Kobe\u2019s port rapidly grew into one of Japan\u2019s most important, facilitating international trade and cultural exchange.\u2026 Read more \n",
+        "latlong": [
+            34.6901,
+            135.1956
+        ]
+    },
+    "Paraguay": {
+        "owned": false,
+        "title": "Been There \u2013 Paraguay",
+        "url": "https://starbucks-mugs.com/mug/been-there-paraguay/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2024/05/bt_paraguay_main.jpg",
+        "latlong": [
+            23.4425,
+            -58.4438
+        ],
+        "description": "\nHere is a release for a landlocked country in South America, Starbucks Been There \u2013 Paraguay mug. This country boasts a rich history and culture. One of its most remarkable historical periods was under the rule of the indigenous Guaran\u00ed people, who cultivated a vibrant society long before the arrival of Spanish explorers in the 16th century. The Spanish colonization of Paraguay began in 1537, leading to centuries of struggle for independence and sovereignty. Notably, Paraguay gained its independence from Spain in 1811, marking the start of a tumultuous yet resilient journey as a sovereign nation.\u2026 Read more \n"
+    },
     "Aruba": {
         "owned": false,
         "title": "Been There \u2013 Aruba",
@@ -1749,7 +1895,7 @@
         ]
     },
     "West Virginia 2": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 West Virginia 2",
         "url": "https://starbucks-mugs.com/mug/been-there-west-virginia-2/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2020/01/bt_wv_v2_1-407x379.jpg",
@@ -1990,7 +2136,7 @@
         ]
     },
     "Valparaiso": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 Valparaiso",
         "url": "https://starbucks-mugs.com/mug/been-there-valparaiso/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/10/bt_valparaiso_1_1-407x320.jpg",
@@ -2001,7 +2147,7 @@
         ]
     },
     "Santiago": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 Santiago",
         "url": "https://starbucks-mugs.com/mug/been-there-santiago/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/10/bt_santiago_front-407x350.jpg",
@@ -2210,7 +2356,7 @@
         ]
     },
     "Maryland 2": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 Maryland 2",
         "url": "https://starbucks-mugs.com/mug/been-there-maryland-2/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2019/02/bt_maryland_v2-407x337.jpg",
@@ -2393,7 +2539,7 @@
         ]
     },
     "Washington, D.C.": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 Washington, D.C.",
         "url": "https://starbucks-mugs.com/mug/been-there-washington-d-c/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/03/bt_washington_dc_preview-407x322.jpg",
@@ -2492,7 +2638,7 @@
         ]
     },
     "New York": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 New York",
         "url": "https://starbucks-mugs.com/mug/been-there-new-york/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/03/bt_new_york-407x396.jpg",
@@ -2542,8 +2688,8 @@
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/03/bt_washington-407x331.jpg",
         "description": "\nThe Evergreen State is obviously getting green mug \u2013 Starbucks Been There Washington. Let\u2019s wait for better photos to identify elements from the mug.\u2026 Read more \n",
         "latlong": [
-            38.9071923,
-            -77.0368707
+            47.7511,
+            -120.7401
         ]
     },
     "South Dakota 2": {
@@ -2938,7 +3084,7 @@
         ]
     },
     "Philadelphia": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 Philadelphia",
         "url": "https://starbucks-mugs.com/mug/been-there-philadelphia/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/04/bt_philadelphia-407x369.jpg",
@@ -2971,7 +3117,7 @@
         ]
     },
     "New York\u00a0City": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 New York\u00a0City",
         "url": "https://starbucks-mugs.com/mug/been-there-new-york-city/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/04/bt_new_york_city-407x327.jpg",
@@ -3367,7 +3513,7 @@
         ]
     },
     "Maryland": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 Maryland",
         "url": "https://starbucks-mugs.com/mug/been-there-maryland/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/03/bt_maryland-407x321.jpg",

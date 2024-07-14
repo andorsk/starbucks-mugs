@@ -25,7 +25,7 @@ def modify_and_encode_svg(svg_path, new_color):
 def visualize(data_path, output_path="index.html"):
     f = open(data_path, 'r')
     data = json.load(f)
-    m = folium.Map(location=data[list(data.keys())[0]]["latlong"], zoom_start=4)
+    m = folium.Map(location=[34.0549076, -118.242643], zoom_start=4)
     owned_count = 0
     total_count = len(data.keys())
     print("got total count", total_count)
