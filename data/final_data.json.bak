@@ -1,4 +1,337 @@
 {
+    "New York\\u00a0City": {
+        "owned": true
+    },
+    "Guangzhou": {
+        "owned": false,
+        "title": "Been There \u2013 Guangzhou",
+        "url": "https://starbucks-mugs.com/mug/been-there-guangzhou/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2022/08/bt_Guangzhou_main.jpg",
+        "latlong": [
+            23.1291,
+            113.2644
+        ],
+        "description": "\nMuch like most of the Chinese mugs from this series, Starbucks Been There \u2013 Guangzhou is an older release that I had no chance to review just yet.\nGuangzhou is one of the oldest cities in the country. Its origins date back over 2,200 years to the Qin Dynasty, when it was established as a trading port. It became a crucial hub during the Tang and Song Dynasties, connecting China to the Maritime Silk Road and facilitating cultural and commercial exchanges with Southeast Asia, the Middle East, and beyond.\u2026 Read more \n"
+    },
+    "Nagano": {
+        "owned": false,
+        "title": "Been There \u2013 Nagano",
+        "url": "https://starbucks-mugs.com/mug/been-there-nagano/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2021/10/bt_nagano_main.jpg",
+        "latlong": [
+            36.6485,
+            138.195
+        ],
+        "description": "\nStarbucks Been There \u2013 Nagano is a mug for a prefecture located in the Ch\u016bbu region of Japan. Originally settled in prehistoric times, Nagano played a significant role during the Sengoku period (1467-1615) as a strategic location for several prominent feudal lords. The area\u2019s historical prominence was further highlighted by the construction of the famous Zenko-ji Temple in the 7th century, which became a major pilgrimage site. During the Edo period (1603-1868), Nagano thrived as a post town on the Nakasendo route, connecting Edo (modern-day Tokyo) with Kyoto.\u2026 Read more \n"
+    },
+    "Australia 2": {
+        "owned": false,
+        "title": "Been There \u2013 Australia 2",
+        "url": "https://starbucks-mugs.com/mug/been-there-australia-2/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2024/05/bt_australia_2_main.jpg",
+        "latlong": [
+            36.6485,
+            138.195
+        ],
+        "description": "\nAbsolutely out of nowhere, Starbucks revealed a new version of the mug released earlier. It seems that the design of\u00a0Been There \u2013 Australia 2 is entirely dedicated to surfing and anything related to it, and as you can see from the comparison picture below, there are pretty much no common elements between v1 and v2.\nIt is a well-known fact that surfing is deeply ingrained in Australian culture, reflecting the nation\u2019s close relationship with the ocean and its laid-back, outdoor lifestyle.\u2026 Read more \n"
+    },
+    "Nagasaki": {
+        "owned": false,
+        "title": "Been There \u2013 Nagasaki",
+        "url": "https://starbucks-mugs.com/mug/been-there-nagasaki/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2021/10/bt_nagasaki_main.jpg",
+        "latlong": [
+            32.7503,
+            129.8779
+        ],
+        "description": "\nStarbucks Been There \u2013 Nagasaki is a mug for a city on Japan\u2019s Kyushu island that has a rich history marked by periods of foreign influence and cultural exchange. As one of Japan\u2019s earliest ports open to foreign trade in the 16th century, Nagasaki became a hub for interactions with Portuguese and Dutch traders, significantly shaping the city\u2019s cultural and economic landscape. The city also played a crucial role in the spread of Christianity in Japan. Today, Nagasaki reflects its diverse historical influences through its architecture, traditions, and vibrant cultural heritage.\u2026 Read more \n"
+    },
+    "NC State": {
+        "owned": false,
+        "title": "Been There \u2013 NC State",
+        "url": "https://starbucks-mugs.com/mug/been-there-nc-state/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2024/06/bt_nc_state_main.jpg",
+        "latlong": [
+            35.7596,
+            -79.0193
+        ],
+        "description": "\nIt has been a while since I reviewed mugs from Campus Collection. Meanwhile, there were some interesting releases, and Starbucks Been There \u2013 NC State is one of them.\nNorth Carolina State University, founded in 1887 as a land-grant institution, began as the North Carolina College of Agriculture and Mechanic Arts. Located in Raleigh, it was established to provide practical education in agriculture and engineering. Over the decades, NC State expanded its academic offerings and research capabilities, becoming a comprehensive university.\u2026 Read more \n"
+    },
+    "Wuhan": {
+        "owned": false,
+        "title": "Been There \u2013 Wuhan",
+        "url": "https://starbucks-mugs.com/mug/been-there-wuhan/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2022/08/bt_Wuhan_main.jpg",
+        "description": "\nBeen There \u2013 Wuhan is a mug for the capital of Hubei province in central China, with a history dating back over 3,500 years. Originally a series of three towns\u2014Wuchang, Hankou, and Hanyang\u2014it became a pivotal site for trade and transportation due to its strategic location at the confluence of the Yangtze and Han rivers. Throughout Chinese history, Wuhan has been a center of political and military significance, notably during the 1911 Wuchang Uprising, which played a crucial role in the downfall of the Qing Dynasty and the establishment of the Republic of China.\u2026 Read more \n",
+        "latlong": [
+            30.5928,
+            114.3052
+        ]
+    },
+    "Osaka": {
+        "owned": false,
+        "title": "Been There \u2013 Osaka",
+        "url": "https://starbucks-mugs.com/mug/been-there-osaka/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2021/10/bt_osaka_main.jpg",
+        "latlong": [
+            34.6937,
+            135.5023
+        ],
+        "description": "\nStarbucks Been There \u2013 Osaka is a mug for one of Japan\u2019s major cities, that boasts a rich history dating back over 1,500 years. Originally known as Naniwa, it served as a bustling port and the nation\u2019s capital during the 7th and 8th centuries under the reigns of Emperor K\u014dtoku and Emperor Sh\u014dmu. The city played a pivotal role in Japan\u2019s maritime trade, connecting the country with the rest of Asia. During the Azuchi-Momoyama period in the late 16th century, Osaka Castle was constructed under the orders of Toyotomi Hideyoshi, a key figure in Japan\u2019s unification.\u2026 Read more \n"
+    },
+    "Xi\u2019an": {
+        "owned": false,
+        "title": "Been There \u2013 Xi\u2019an",
+        "url": "https://starbucks-mugs.com/mug/been-there-xian/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2022/08/bt_Xian_main.jpg",
+        "description": "\nHere is Been There \u2013 Xi\u2019an mug for one of China\u2019s oldest cities, a vibrant historical epicenter of the country. Once known as Chang\u2019an, it was the capital for several of China\u2019s most significant dynasties, including the Zhou, Qin, Han, and Tang. This city\u2019s historical prominence is epitomized by the famed Terracotta Army, which guards the tomb of Emperor Qin Shi Huang, the first Emperor of China. Xi\u2019an was also the eastern terminus of the Silk Road, facilitating cultural, commercial, and technological exchanges between East and West for centuries.\u2026 Read more \n",
+        "latlong": [
+            34.2658,
+            108.9541
+        ]
+    },
+    "Chengdu": {
+        "owned": false,
+        "title": "Been There \u2013 Chengdu",
+        "url": "https://starbucks-mugs.com/mug/been-there-chengdu/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2022/08/bt_Chengdu_main.jpg",
+        "description": "\nBeen There \u2013 Chengdu is the mug for the capital of Sichuan Province in southwestern China, boasts a rich historical legacy dating back over 4,000 years. As one of the cradles of Chinese civilization, it was a significant cultural and political center during the ancient Shu Kingdom, long before the Qin dynasty unified China. Archaeological discoveries, such as the Jinsha Site, have unearthed artifacts that testify to Chengdu\u2019s ancient prosperity and cultural richness. During the Han dynasty, Chengdu was known as a major hub of commerce and industry, particularly noted for its production of brocade, which earned it the nickname \u201cBrocade City.\u201d Throughout the Tang and Song dynasties, Chengdu continued to flourish as a cultural and literary center, contributing significantly to Chinese poetry and art.\u2026 Read more \n",
+        "latlong": [
+            30.5728,
+            104.0668
+        ]
+    },
+    "Xiamen": {
+        "owned": false,
+        "title": "Been There \u2013 Xiamen",
+        "url": "https://starbucks-mugs.com/mug/been-there-xiamen/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2022/08/bt_Xiamen_main.jpg",
+        "description": "\nStarbucks Been There \u2013 Xiamen is a mug for a coastal city in southeastern China. Historically known as Amoy, it emerged as a vital port during the Song Dynasty, flourishing through maritime trade. The city played a significant role during the Ming Dynasty as a defense base against pirates and later as a key site during the First Opium War. Its colonial legacy is evident in the Gulangyu Island, a UNESCO World Heritage site, reflecting a blend of Western and Eastern architectural styles.\u2026 Read more \n",
+        "location": [
+            24.4795,
+            118.0895
+        ]
+    },
+    "Shenzhen": {
+        "owned": false,
+        "title": "Been There \u2013 Shenzhen",
+        "url": "https://starbucks-mugs.com/mug/been-there-shenzhen/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2022/08/bt_Shenzhen_main.jpg",
+        "description": "\nStarbucks Been There \u2013 Shenzhen is a mug for a city, located in southern China, that has transformed itself from a small fishing village into a global technological hub. Known as the \u201cSilicon Valley of China,\u201d Shenzhen is home to numerous tech giants and startups, attracting innovators and entrepreneurs from around the world. With its stunning skyline, modern architecture, and bustling streets, the city offers a unique blend of tradition and modernity. Shenzhen is also renowned for its shopping destinations, cultural attractions, and diverse culinary scene.\u2026 Read more \n",
+        "latlong": [
+            22.5429,
+            114.0596
+        ]
+    },
+    "Kobe": {
+        "owned": false,
+        "title": "Been There \u2013 Kobe",
+        "url": "https://starbucks-mugs.com/mug/been-there-kobe/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2021/10/bt_kobe_main.jpg",
+        "description": "\nStarbucks Been There \u2013 Kobe is a mug for a prominent port city located on Osaka Bay in Japan, that has a rich history dating back to its establishment in the Nara period (710-794). During the 12th century, Kobe became a significant center for trade and commerce due to its strategic location. It was officially founded in 1868, the same year Japan opened its ports to foreign trade, marking the beginning of the Meiji era. Kobe\u2019s port rapidly grew into one of Japan\u2019s most important, facilitating international trade and cultural exchange.\u2026 Read more \n",
+        "latlong": [
+            34.6901,
+            135.1956
+        ]
+    },
+    "Paraguay": {
+        "owned": false,
+        "title": "Been There \u2013 Paraguay",
+        "url": "https://starbucks-mugs.com/mug/been-there-paraguay/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2024/05/bt_paraguay_main.jpg",
+        "latlong": [
+            23.4425,
+            -58.4438
+        ],
+        "description": "\nHere is a release for a landlocked country in South America, Starbucks Been There \u2013 Paraguay mug. This country boasts a rich history and culture. One of its most remarkable historical periods was under the rule of the indigenous Guaran\u00ed people, who cultivated a vibrant society long before the arrival of Spanish explorers in the 16th century. The Spanish colonization of Paraguay began in 1537, leading to centuries of struggle for independence and sovereignty. Notably, Paraguay gained its independence from Spain in 1811, marking the start of a tumultuous yet resilient journey as a sovereign nation.\u2026 Read more \n"
+    },
+    "Aruba": {
+        "owned": false,
+        "title": "Been There \u2013 Aruba",
+        "url": "https://starbucks-mugs.com/mug/been-there-aruba/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2023/01/bt_aruba_1.jpg",
+        "description": "\nLet\u2019s move to South America for a second and review Starbucks Been There \u2013 Aruba mug.\nAruba, a Caribbean gem renowned for its pristine beaches and vibrant culture, boasts a rich history that spans centuries. Believed to have been inhabited as early as 1000 AD by the Caquetio indigenous people, Aruba later became a Spanish colony in the 16th century before falling under Dutch control in 1636. Its name is thought to derive from the Spanish phrase \u201coro hubo,\u201d meaning \u201cthere was gold,\u201d reflecting the island\u2019s once thriving gold mining industry.\u2026 Read more \n",
+        "latlong": [
+            12.52111,
+            -69.968338
+        ]
+    },
+    "Cebu 2": {
+        "owned": false,
+        "title": "Been There \u2013 Cebu 2 \u2013 Summer Edition 2023",
+        "url": "https://starbucks-mugs.com/mug/been-there-cebu-2-summer-edition-2023/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2023/11/bt_cebu_summer-2023_main.jpg",
+        "description": "\nStarbucks Been There Cebu 2 Summer Edition 2023 is the third mug from last summer\u2019s batch release. Similar to others it has the design of the regular mug outlined in black. Do you see how the Starbucks reusable cup is not red? This tells us that the mug is not a Christmas edition, but rather something else.\nCebu, the bustling province located in the Central Visayas region of the Philippines, is a vibrant tapestry of history and culture. It holds a significant place in Philippine history as the site of Ferdinand Magellan\u2019s arrival in 1521, marking the beginning of Spanish colonization in the archipelago.\u2026 Read more \n",
+        "latlong": [
+            10.3156992,
+            123.8854366
+        ]
+    },
+    "China": {
+        "owned": false,
+        "title": "Been There \u2013 China",
+        "url": "https://starbucks-mugs.com/mug/been-there-china/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2022/09/bt_china_country_main.jpg",
+        "description": "\nStarbucks Been There \u2013 China is probably the best-looking mug from this series that I\u2019ve seen. The designers did a great job while using bright red and shiny gold colors. This, however, comes with the inconvenience of not being able to use it in the microwave or dishwasher. Please note, that there are dozens of Been There city mugs from China that I will be adding soon, stay tuned!\nThere are many symbols and points of interest from China that can be seen on the mug.\u2026 Read more \n",
+        "latlong": [
+            35.86166,
+            104.195397
+        ]
+    },
+    "Cartagena": {
+        "owned": false,
+        "title": "Been There \u2013 Cartagena",
+        "url": "https://starbucks-mugs.com/mug/been-there-cartagena/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2022/07/bt_cartagena_main_m.jpg",
+        "description": "\nStarbucks Been There \u2013 Cartagena should be available in stores for a while now. It\u2019s not the first Colombian city mug from this series, but rather the part of the second batch.\nCartagena, a vibrant city nestled on the northern coast of Colombia, is a cultural gem steeped in history and charm. Originally inhabited by indigenous peoples, the city was founded by Spanish explorer Pedro de Heredia in 1533, becoming a strategic port in the Spanish colonial empire. Over the centuries, Cartagena thrived as a vital hub for trade, drawing merchants, adventurers, and pirates alike.\u2026 Read more \n",
+        "latlong": [
+            10.3932277,
+            -75.4832311
+        ]
+    },
+    "Guyana": {
+        "owned": false,
+        "title": "Been There \u2013 Guyana",
+        "url": "https://starbucks-mugs.com/mug/been-there-guyana/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2023/04/bt_guyana_main.jpg",
+        "description": "\nStarbucks Been There \u2013 Guyana is a mug for the only English-speaking country in South America. Guyana, officially known as the Co-operative Republic of Guyana, shares borders with Venezuela to the west, Brazil to the south, and Suriname to the east, with the Atlantic Ocean gracing its northern shores. The capital and largest city, Georgetown, situated at the mouth of the Demerara River, serves as the cultural and economic hub of the nation.\nGuyana\u2019s history is a tapestry woven with threads of indigenous cultures, European colonialism, and the struggles for independence.\u2026 Read more \n",
+        "latlong": [
+            4.860416,
+            -58.93018
+        ]
+    },
+    "Mississippi 3": {
+        "owned": false,
+        "title": "Been There \u2013 Mississippi 3",
+        "url": "https://starbucks-mugs.com/mug/been-there-mississippi-3/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2024/03/bt_mississippi_v3_main.jpg",
+        "description": "\nWhile the new mugs keep coming regularly, Starbucks continues revising its existing inventory by releasing updated versions of some of its Been There mugs. In a way, it became a hallmark of this series. Yes, we\u2019ve seen some YAHs updated, but all those were exceptions caused by some legal reasons. And of course, that doesn\u2019t apply to Disney YAHs, which we\u2019ve seen plenty of.\nAlright, so, Starbucks Been There \u2013 Mississippi 3 is the updated version of the previously released mug.\u2026 Read more \n",
+        "latlong": [
+            32.3546679,
+            -89.3985283
+        ]
+    },
+    "Japan": {
+        "owned": false,
+        "title": "Been There \u2013 Japan",
+        "url": "https://starbucks-mugs.com/mug/been-there-japan/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2022/03/bt_japan_1_main.jpg",
+        "description": "\nIt has been a while since the release of the Starbucks Been There \u2013 Japan\u00a0mug, and I have no excuse for not adding it to the collection. Similar to the YAH series, the Japan country mug is unique in the sense, that it has four siblings representing four seasons of the year: Spring, Summer, Fall, and Winter. I will be adding those four to the collection soon.\nThe design of this \u201cregular\u201d mug uses red and yellow colors. Here are some symbols of Japan that I am seeing on it:\nFuji, also known as Mount Fuji, is Japan\u2019s iconic stratovolcano and the country\u2019s tallest peak, standing at 12,389 ft.\u2026 Read more \n",
+        "latlong": [
+            36.204824,
+            138.252924
+        ]
+    },
+    "Cambridge": {
+        "owned": false,
+        "title": "Been There \u2013 Cambridge",
+        "url": "https://starbucks-mugs.com/mug/been-there-cambridge/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2022/02/bt_cambridge_main.jpg",
+        "description": "\nStarbucks Been There \u2013 Cambridge is a mug for a city in Massachusetts, located just across the Charles River from Boston. Cambridge is renowned for its prestigious universities, Harvard University, the Massachusetts Institute of Technology (MIT), and Lesley University, which have shaped its identity as an intellectual and cultural hub. I am expecting Starbucks to release the mugs for these academic institutions later, in the scope of the Campus Collection. Stay tuned for the latest news about that!\nCambridge was settled in 1630 by the Massachusetts Bay Company and was originally called New Towne.\u2026 Read more \n",
+        "latlong": [
+            52.1950788,
+            0.1312729
+        ]
+    },
+    "Curacao": {
+        "owned": false,
+        "title": "Been There \u2013 Curacao",
+        "url": "https://starbucks-mugs.com/mug/been-there-curacao/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2021/05/bt_curacao_main_m.jpg",
+        "description": "\nStarbucks Been There \u2013 Cura\u00e7ao mug was initially spotted in personal collections back in 2019, however it was never seen in stores till recently. Not sure what was the reason for the delay, but here it is, brand new and nice looking.\nCura\u00e7ao, a constituent country of the Kingdom of the Netherlands, lies in the southern Caribbean Sea, about 65 kilometers north of the Venezuelan coast. Its capital and largest city, Willemstad, is renowned for its colorful Dutch colonial architecture, earning it recognition as a UNESCO World Heritage Site.\u2026 Read more \n",
+        "latlong": [
+            12.16957,
+            -68.99002
+        ]
+    },
+    "Michigan State": {
+        "owned": false,
+        "title": "Been There \u2013 Michigan State",
+        "url": "https://starbucks-mugs.com/mug/been-there-michigan-state/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2024/01/bt_michigan_state_1.jpg",
+        "description": "\nStarbucks Been There \u2013 Michigan State mug is designed using mostly two colors: green which symbolizes the agricultural heritage of the university and the lush landscapes of Michigan, and white which represents purity and integrity.\nFounded in 1855, Michigan State University (MSU) has a rich and storied history that spans over 160 years. Situated in East Lansing, Michigan, MSU has evolved from a small agricultural college into a globally recognized institution of higher learning. Initially named the Agricultural College of the State of Michigan, MSU was the first land-grant college in the United States, emphasizing practical education and research in agriculture and the mechanical arts.\u2026 Read more \n",
+        "latlong": [
+            44.3148443,
+            -85.60236429999999
+        ]
+    },
+    "Savannah": {
+        "owned": false,
+        "title": "Been There \u2013 Savannah",
+        "url": "https://starbucks-mugs.com/mug/been-there-savannah/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2022/12/bt_savannah_main.jpg",
+        "description": "\nI am still catching up with the USA releases, and here\u2019s one of them. Starbucks Been There \u2013 Savannah mug should be available in stores for a while now.\nSavannah\u2019s history is as captivating as its picturesque landscape. Founded in 1733 by British General James Oglethorpe, Savannah served as the first colonial capital of Georgia. The city\u2019s strategic location along the Savannah River facilitated trade and commerce, contributing to its early growth and prosperity.\nThroughout the centuries, Savannah bore witness to pivotal events in American history.\u2026 Read more \n",
+        "latlong": [
+            32.0808989,
+            -81.091203
+        ]
+    },
+    "The University of Utah": {
+        "owned": false,
+        "title": "Been There \u2013 The University of Utah",
+        "url": "https://starbucks-mugs.com/mug/been-there-the-university-of-utah/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2024/03/bt_uni_utah_main.jpg",
+        "description": "\nHere\u2019s the new release from the Campus Collection for a public research university in Salt Lake City. Starbucks Been There \u2013 The University of Utah mug is designed using the official colors of the University: Utah Red, Black, and White.\nThe University of Utah (UU, U of U, or simply Utah) traces its origins back to the early days of the Utah Territory when Brigham Young, then the president of The Church of Jesus Christ of Latter-day Saints, saw the need for a higher education institution.\u2026 Read more \n",
+        "latlong": [
+            40.7649368,
+            -111.8421021
+        ]
+    },
+    "University of Wisconsin-Madison": {
+        "owned": false,
+        "title": "Been There \u2013 University of Wisconsin-Madison",
+        "url": "https://starbucks-mugs.com/mug/been-there-university-of-wisconsin-madison/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2023/01/bt_wisconsin_madison_1.jpg",
+        "description": "\nStarbucks Been There \u2013 University of Wisconsin-Madison is a mug for a prestigious institution known for its rich history, vibrant traditions, and iconic symbols. The University of Wisconsin-Madison, often referred to as UW-Madison or simply Wisconsin has established itself as a hub of academic excellence and a center for innovation.\nFounded in 1848, the University of Wisconsin-Madison has a storied past that has shaped its identity. Initially named the University of the Territory of Wisconsin, it became the first public university in the state and the birthplace of the Wisconsin Idea.\u2026 Read more \n",
+        "latlong": [
+            43.076592,
+            -89.4124875
+        ]
+    },
+    "South Carolina 2": {
+        "owned": false,
+        "title": "Been There \u2013 South Carolina 2",
+        "url": "https://starbucks-mugs.com/mug/been-there-south-carolina-2/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2023/08/bt_south_carolina_v2_main.jpg",
+        "description": "\nUnexpectedly, Starbucks made a decision to issue an updated version of the previously released mug. The design of Been There South Carolina v2 shows some rearrangement of the elements and removal of \u201cthe rice state\u201d nickname. The latter doesn\u2019t seem to be widely used, so I guess the change makes sense. The Palmetto State, on the other hand, is widely known as the reference to the state tree, the Palmetto. Speaking of which, the v1 had two of these trees in the design, one red and one yellow.\u2026 Read more \n",
+        "latlong": [
+            33.6712005,
+            -81.3399414
+        ]
+    },
+    "Punta Cana": {
+        "owned": false,
+        "title": "Been There \u2013 Punta Cana",
+        "url": "https://starbucks-mugs.com/mug/been-there-punta-cana/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2024/02/bt_punta_cana_main.jpg",
+        "description": "\nStarbucks Been There \u2013 Punta Cana is a mug for a popular tourist destination located on the eastern coast of La Hispaniola island, which is shared by the Dominican Republic and Haiti. It is known for its beautiful beaches, luxurious resorts, and vibrant culture. \nPunta Cana\u2019s transformation from an unknown area to a world-renowned beach destination began in 1969 when a group of American investors purchased 30 square miles of undeveloped land along the Dominican Republic\u2019s east coast. The first hotel in Punta Cana was built in 1971, and from there, tourism in the area took off .\u2026 Read more \n",
+        "latlong": [
+            18.5600761,
+            -68.372535
+        ]
+    },
+    "University of Minnesota": {
+        "owned": false,
+        "title": "Been There \u2013 University of Minnesota",
+        "url": "https://starbucks-mugs.com/mug/been-there-university-of-minnesota/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2024/02/bt_uni_minnesota_main.jpg",
+        "description": "\nThis mug was in my queue since last year, and I am finally adding it to the site. Been There \u2013 University of Minnesota is a release for the university nestled along the banks of the Mississippi River in Minneapolis and St. Paul. Often referred to as UMN or simply the U, it stands as a beacon of academic excellence and innovation in the heart of the Midwest. Founded in 1851, it is one of the oldest public research universities in the United States and has played a pivotal role in shaping the intellectual and cultural landscape of the region.\u2026 Read more \n",
+        "latlong": [
+            44.9753541,
+            -93.2330739
+        ]
+    },
+    "M\u00e9xico": {
+        "owned": false,
+        "title": "Been There \u2013 M\u00e9xico",
+        "url": "https://starbucks-mugs.com/mug/been-there-mexico/",
+        "img": "https://starbucks-mugs.com/wp-content/uploads/2018/10/bt_mexico_1-407x345.jpg",
+        "description": "\nMexican BT mugs are finally making their appearance here. There are 26 in total and I would like to start with, Starbucks Been There \u2013 Mexico mug. It is designed using shades of green and yellow. Green, white and red are the colors of the National Flag. There is no official meaning of the colors, however, through the years they had the following symbolism:\n\u2013 Green: independence (from Spain); Hope;\n\u2013 White: religion (the Roman Catholic); Unity;\n\u2013 Red: union (Europe and America); Blood of the national heroes;\nHere are some symbols and points of interest from Mexico that can be seen on the mug:\n\u2013 El Castillo (Temple of Kukulcan) a must-visit part of Chichen Itza, a pre-Columbian city built by the Maya people.\u2026 Read more \n",
+        "latlong": [
+            23.634501,
+            -102.552784
+        ]
+    },
     "Okinawa": {
         "owned": false,
         "title": "Been There \u2013 Okinawa",
@@ -1562,7 +1895,7 @@
         ]
     },
     "West Virginia 2": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 West Virginia 2",
         "url": "https://starbucks-mugs.com/mug/been-there-west-virginia-2/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2020/01/bt_wv_v2_1-407x379.jpg",
@@ -1803,7 +2136,7 @@
         ]
     },
     "Valparaiso": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 Valparaiso",
         "url": "https://starbucks-mugs.com/mug/been-there-valparaiso/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/10/bt_valparaiso_1_1-407x320.jpg",
@@ -1814,7 +2147,7 @@
         ]
     },
     "Santiago": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 Santiago",
         "url": "https://starbucks-mugs.com/mug/been-there-santiago/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/10/bt_santiago_front-407x350.jpg",
@@ -2023,7 +2356,7 @@
         ]
     },
     "Maryland 2": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 Maryland 2",
         "url": "https://starbucks-mugs.com/mug/been-there-maryland-2/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2019/02/bt_maryland_v2-407x337.jpg",
@@ -2206,7 +2539,7 @@
         ]
     },
     "Washington, D.C.": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 Washington, D.C.",
         "url": "https://starbucks-mugs.com/mug/been-there-washington-d-c/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/03/bt_washington_dc_preview-407x322.jpg",
@@ -2305,7 +2638,7 @@
         ]
     },
     "New York": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 New York",
         "url": "https://starbucks-mugs.com/mug/been-there-new-york/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/03/bt_new_york-407x396.jpg",
@@ -2355,8 +2688,8 @@
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/03/bt_washington-407x331.jpg",
         "description": "\nThe Evergreen State is obviously getting green mug \u2013 Starbucks Been There Washington. Let\u2019s wait for better photos to identify elements from the mug.\u2026 Read more \n",
         "latlong": [
-            38.9071923,
-            -77.0368707
+            47.7511,
+            -120.7401
         ]
     },
     "South Dakota 2": {
@@ -2751,7 +3084,7 @@
         ]
     },
     "Philadelphia": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 Philadelphia",
         "url": "https://starbucks-mugs.com/mug/been-there-philadelphia/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/04/bt_philadelphia-407x369.jpg",
@@ -2784,7 +3117,7 @@
         ]
     },
     "New York\u00a0City": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 New York\u00a0City",
         "url": "https://starbucks-mugs.com/mug/been-there-new-york-city/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/04/bt_new_york_city-407x327.jpg",
@@ -3180,7 +3513,7 @@
         ]
     },
     "Maryland": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 Maryland",
         "url": "https://starbucks-mugs.com/mug/been-there-maryland/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/03/bt_maryland-407x321.jpg",
