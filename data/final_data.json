@@ -2616,7 +2616,7 @@
         ]
     },
     "San Francisco": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 San Francisco",
         "url": "https://starbucks-mugs.com/mug/been-there-san-francisco/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/04/bt_san_francisco-407x314.jpg",
@@ -2627,7 +2627,7 @@
         ]
     },
     "Chicago": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 Chicago",
         "url": "https://starbucks-mugs.com/mug/been-there-chicago/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/04/bt_chicago-407x309.jpg",
@@ -3447,7 +3447,7 @@
         ]
     },
     "Wisconsin": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 Wisconsin",
         "url": "https://starbucks-mugs.com/mug/been-there-wisconsin/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/03/bt_wisconsin.jpg",
@@ -3458,7 +3458,7 @@
         ]
     },
     "Illinois": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 Illinois",
         "url": "https://starbucks-mugs.com/mug/been-there-illinois/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/03/bt_illinois-407x345.jpg",
@@ -3568,7 +3568,7 @@
         ]
     },
     "Indiana": {
-        "owned": false,
+        "owned": true,
         "title": "Been There \u2013 Indiana",
         "url": "https://starbucks-mugs.com/mug/been-there-indiana/",
         "img": "https://starbucks-mugs.com/wp-content/uploads/2018/03/bt_indiana-407x287.jpg",
