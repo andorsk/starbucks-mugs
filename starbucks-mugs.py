@@ -25,7 +25,22 @@ def modify_and_encode_svg(svg_path, new_color):
 def visualize(data_path, output_path="index.html"):
     f = open(data_path, 'r')
     data = json.load(f)
-    m = folium.Map(location=[34.0549076, -118.242643], zoom_start=4)
+    m = folium.Map(location=[34.0549076, -118.242643], zoom_start=4, tiles=None)
+
+    # Add multiple tile layers
+    folium.TileLayer('OpenStreetMap', name='Standard').add_to(m)
+    folium.TileLayer('CartoDB positron', name='Light').add_to(m)
+    folium.TileLayer('CartoDB dark_matter', name='Dark').add_to(m)
+    folium.TileLayer(
+        tiles='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+        attr='Esri',
+        name='Satellite'
+    ).add_to(m)
+    folium.TileLayer(
+        tiles='https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
+        attr='Esri',
+        name='Terrain'
+    ).add_to(m)
     owned_count = 0
     total_count = len(data.keys())
     print("got total count", total_count)
@@ -54,10 +69,18 @@ def visualize(data_path, output_path="index.html"):
                 tooltip=tooltip
         ).add_to(m)
 
-    footer_html = f"<div style='position: fixed; bottom: 10px; left: 10px; height: 20px; background-color: white; z-index:9999; font-size:14px; padding: 2px 8px; border-radius: 4px;'>Credit to <a href='https://starbucks-mugs.com/category/been-there/'>starbucks-mugs.com</a> | <a href='https://github.com/andorsk/starbucks-mugs.git'>Github</a></div>"
-    legend_html = "<div style='position: fixed; top: 40px; left: 50px; padding: 10px; height: 80px; background-color: white; z-index:9999; font-size:16px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);'>Legend<br/><svg height='10' width='10'><circle cx='5' cy='5' r='5' fill='green' /></svg> Owned &nbsp;<br/><svg height='10' width='10'><circle cx='5' cy='5' r='5' fill='orange' /></svg> Not Owned</div>"
+    # Add layer control
+    folium.LayerControl(position='topleft').add_to(m)
 
-    header_html = f"<div style='position: fixed; top: 10px; left: 50px; width: 300px; height: 20px; background-color: white; z-index:9999; font-size:16px; padding: 2px 8px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);'><b>Owned: {owned_count} / Total: {total_count}</b></div>"
+    footer_html = f"<div style='position: fixed; bottom: 10px; left: 10px; height: 20px; background-color: white; z-index:9999; font-size:14px; padding: 2px 8px; border-radius: 4px;'>Credit to <a href='https://starbucks-mugs.com/category/been-there/'>starbucks-mugs.com</a> | <a href='https://github.com/andorsk/starbucks-mugs.git'>Github</a></div>"
+    
+    header_html = f"""<div style='position: fixed; top: 10px; left: 50%; transform: translateX(-50%); background: white; z-index: 999; padding: 10px 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); font-family: -apple-system, BlinkMacSystemFont, sans-serif; display: flex; align-items: center; gap: 20px;'>
+        <span style='font-size: 15px; color: #1e3932;'><strong style='color: #00704A;'>{owned_count}</strong> owned of <strong>{total_count}</strong> mugs</span>
+        <span style='font-size: 13px; color: #666; display: flex; align-items: center; gap: 12px;'>
+            <span style='display: flex; align-items: center; gap: 4px;'><svg height='10' width='10'><circle cx='5' cy='5' r='5' fill='#00704A'/></svg> Owned</span>
+            <span style='display: flex; align-items: center; gap: 4px;'><svg height='10' width='10'><circle cx='5' cy='5' r='5' fill='#f58220'/></svg> Not Owned</span>
+        </span>
+    </div>"""
 
     # Build mug list panel
     sorted_mugs = sorted(data.items(), key=lambda x: (not x[1].get('owned', False), x[0]))
@@ -82,15 +105,38 @@ def visualize(data_path, output_path="index.html"):
         .mug-item:hover {{ background: #f0f0f0; }}
         .filter-btn {{ padding: 6px 12px; border: 1px solid #ddd; background: white; cursor: pointer; font-size: 12px; }}
         .filter-btn.active {{ background: #00704A; color: white; border-color: #00704A; }}
-        #mug-modal {{ display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 0; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); z-index: 10001; max-width: 350px; width: 90%; }}
+        #mug-modal, #info-modal {{ display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 0; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); z-index: 10001; max-width: 350px; width: 90%; }}
+        #info-modal {{ max-width: 450px; }}
+        #info-btn {{ position: fixed; bottom: 40px; left: 10px; z-index: 10000; background: #1e3932; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }}
         #modal-overlay {{ display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 10000; }}
         #mug-panel {{ transition: transform 0.3s ease; }}
         #mug-panel.collapsed {{ transform: translateX(280px); }}
         #panel-toggle {{ position: fixed; top: 10px; right: 290px; z-index: 10000; background: #00704A; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2); transition: right 0.3s ease; }}
         #panel-toggle.collapsed {{ right: 10px; }}
     </style>
+    <button id='info-btn' onclick='showInfo()'>&#x2139; Info</button>
     <button id='panel-toggle' onclick='togglePanel()'>&#x2630; Mugs</button>
     <div id='modal-overlay' onclick='closeModal()'></div>
+    <div id='info-modal'>
+        <div style='padding: 12px 16px; background: #00704A; color: white; font-weight: bold; border-radius: 8px 8px 0 0;'>
+            <span>starbucks-mugs</span>
+            <span onclick='closeModal()' style='float: right; cursor: pointer; font-size: 18px;'>&times;</span>
+        </div>
+        <div style='padding: 16px; font-size: 14px; line-height: 1.6;'>
+            <p style='margin: 0 0 12px 0;'>I got tired of trying to track my Starbucks mugs I collect, so I scraped <a href='https://starbucks-mugs.com/category/been-there/' target='_blank'>starbucks-mugs.com</a> and put a little website up to track it.</p>
+            <p style='margin: 0 0 12px 0;'>Feel free to fork this into your own thing and just update the <code>owned_mugs.txt</code> for changing the markers.</p>
+            <p style='margin: 0 0 12px 0; font-size: 12px; color: #666;'>Thank you to starbucks-mugs.com for providing the data. Uses Google API for geocoding.</p>
+            <div style='background: #f5f5f5; padding: 12px; border-radius: 4px; margin-bottom: 12px;'>
+                <strong style='color: #00704A;'>Rules I Use For Collection</strong>
+                <ul style='margin: 8px 0 0 0; padding-left: 20px;'>
+                    <li>Must be bought at a Starbucks. i.e. no ordering online.</li>
+                    <li>Must have visited the location and outside of the airport. i.e. layovers don't count.</li>
+                    <li>You MAY ask a friend, not a stranger, to pick it up for you, as long as both of you follow the previous two criteria. They must bring it to you personally.</li>
+                </ul>
+            </div>
+            <a href='https://github.com/andorsk/starbucks-mugs' target='_blank' style='display: block; padding: 10px; background: #1e3932; color: white; text-align: center; border-radius: 4px; text-decoration: none;'>Clone on GitHub</a>
+        </div>
+    </div>
     <div id='mug-modal'>
         <div style='padding: 12px 16px; background: #00704A; color: white; font-weight: bold; border-radius: 8px 8px 0 0;'>
             <span id='modal-title'>Mug Name</span>
@@ -164,6 +210,7 @@ def visualize(data_path, output_path="index.html"):
     function closeModal() {{
         document.getElementById('modal-overlay').style.display = 'none';
         document.getElementById('mug-modal').style.display = 'none';
+        document.getElementById('info-modal').style.display = 'none';
     }}
 
     function viewOnMap() {{
@@ -188,11 +235,15 @@ def visualize(data_path, output_path="index.html"):
             toggle.innerHTML = '&times; Hide';
         }}
     }}
+
+    function showInfo() {{
+        document.getElementById('modal-overlay').style.display = 'block';
+        document.getElementById('info-modal').style.display = 'block';
+    }}
     </script>
     """
 
     m.get_root().html.add_child(folium.Element(header_html))
-    m.get_root().html.add_child(folium.Element(legend_html))
     m.get_root().html.add_child(folium.Element(footer_html))
     m.get_root().html.add_child(folium.Element(panel_html))
 
