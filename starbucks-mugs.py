@@ -241,6 +241,17 @@ def visualize(data_path, output_path="index.html"):
         document.getElementById('modal-overlay').style.display = 'block';
         document.getElementById('info-modal').style.display = 'block';
     }}
+
+    // Collapse panel by default on mobile
+    if (window.innerWidth <= 768) {{
+        var panel = document.getElementById('mug-panel');
+        var toggle = document.getElementById('panel-toggle');
+        if (panel && toggle) {{
+            panel.classList.add('collapsed');
+            toggle.classList.add('collapsed');
+            toggle.innerHTML = '&#x2630; Mugs';
+        }}
+    }}
     </script>
     """
 
