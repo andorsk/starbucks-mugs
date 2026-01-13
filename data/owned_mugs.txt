@@ -17,7 +17,7 @@ Been There – Pittsburgh
 Been There – Seattle
 Been There – Los Angeles 2
 Been There – Las Vegas
-Been There – Vancouver
+Been There – Vancouver Island
 Been There – Austin
 Been There – New Mexico
 Been There – Nevada
@@ -49,11 +49,11 @@ Been There – Valparaiso
 Been There – Toronto
 Been There – Chicago
 Been There – San Francisco
-Been There – Illionis
+Been There – Illinois
 Been There – Wisconsin
 Been There – Indiana
 Been There – Hiroshima
-Been There – Fukaoka
+Been There – Fukuoka
 Been There – Tokyo
 Been There – Japan
 Been There – Kyoto
@@ -64,3 +64,11 @@ Been There – Texas
 Been There – Dallas
 Been There – Detroit
 Been There – Michigan
+Been There – Chennai
+Been There – Ahmedabad
+Been There – Kolkata
+Been There – Hong Kong
+Been There – Boston
+Been There – Hollywood
+Been There – San Diego
+Been There – Ohio

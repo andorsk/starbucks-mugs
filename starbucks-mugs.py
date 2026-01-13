@@ -54,13 +54,147 @@ def visualize(data_path, output_path="index.html"):
                 tooltip=tooltip
         ).add_to(m)
 
-    footer_html = f"<div style='position: fixed; bottom: 10px; height: 20px; background-color: white; z-index:9999; font-size:16px;'>Credit to <a href='https://starbucks-mugs.com/category/been-there/'>starbucks-mugs.com</a> for the initial seed data. See scripts at my <a href='https://github.com/andorsk/starbucks-mugs.git'>Github</a></div>"
-    legend_html = "<div style='position: fixed; top: 40px; left: 50px;  padding: 10px 10px 10px 10px;  height: 80px; background-color: white; z-index:9999; font-size:16px;'>Legend<br/><svg height='10' width='10'><circle cx='5' cy='5' r='5' fill='green' /></svg> Owned &nbsp;<br/><svg height='10' width='10'><circle cx='5' cy='5' r='5' fill='orange' /></svg> Not Owned</div>"
+    footer_html = f"<div style='position: fixed; bottom: 10px; left: 10px; height: 20px; background-color: white; z-index:9999; font-size:14px; padding: 2px 8px; border-radius: 4px;'>Credit to <a href='https://starbucks-mugs.com/category/been-there/'>starbucks-mugs.com</a> | <a href='https://github.com/andorsk/starbucks-mugs.git'>Github</a></div>"
+    legend_html = "<div style='position: fixed; top: 40px; left: 50px; padding: 10px; height: 80px; background-color: white; z-index:9999; font-size:16px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);'>Legend<br/><svg height='10' width='10'><circle cx='5' cy='5' r='5' fill='green' /></svg> Owned &nbsp;<br/><svg height='10' width='10'><circle cx='5' cy='5' r='5' fill='orange' /></svg> Not Owned</div>"
 
-    header_html = f"<div style='position: fixed; top: 10px; left: 50px; width: 300px; height: 20px; background-color: white; z-index:9999; font-size:16px;'><b>Owned: {owned_count} / Total: {total_count}</b></div>"
+    header_html = f"<div style='position: fixed; top: 10px; left: 50px; width: 300px; height: 20px; background-color: white; z-index:9999; font-size:16px; padding: 2px 8px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);'><b>Owned: {owned_count} / Total: {total_count}</b></div>"
+
+    # Build mug list panel
+    sorted_mugs = sorted(data.items(), key=lambda x: (not x[1].get('owned', False), x[0]))
+    mug_items = []
+    mug_data_js = []
+    for name, info in sorted_mugs:
+        owned = info.get('owned', False)
+        icon = '&#x2705;' if owned else '&#x25CB;'
+        color = '#2d5016' if owned else '#666'
+        owned_class = 'owned' if owned else 'not-owned'
+        latlong = info.get('latlong', [0, 0])
+        img = info.get('img', '')
+        url = info.get('url', '')
+        desc = info.get('description', '').replace("'", "\\'").replace("\n", " ")[:200]
+        safe_name = name.replace("'", "\\'")
+        mug_items.append(f"<div class='mug-item {owned_class}' data-name='{safe_name}' style='padding: 8px 12px; border-bottom: 1px solid #eee; color: {color}; cursor: pointer;' onclick=\"showMug('{safe_name}')\">{icon} {name}</div>")
+        if latlong and latlong[0] != 0:
+            mug_data_js.append(f"'{safe_name}': {{lat: {latlong[0]}, lng: {latlong[1]}, img: '{img}', url: '{url}', desc: '{desc}', owned: {str(owned).lower()}}}")
+
+    panel_html = f"""
+    <style>
+        .mug-item:hover {{ background: #f0f0f0; }}
+        .filter-btn {{ padding: 6px 12px; border: 1px solid #ddd; background: white; cursor: pointer; font-size: 12px; }}
+        .filter-btn.active {{ background: #00704A; color: white; border-color: #00704A; }}
+        #mug-modal {{ display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 0; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); z-index: 10001; max-width: 350px; width: 90%; }}
+        #modal-overlay {{ display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 10000; }}
+        #mug-panel {{ transition: transform 0.3s ease; }}
+        #mug-panel.collapsed {{ transform: translateX(280px); }}
+        #panel-toggle {{ position: fixed; top: 10px; right: 290px; z-index: 10000; background: #00704A; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2); transition: right 0.3s ease; }}
+        #panel-toggle.collapsed {{ right: 10px; }}
+    </style>
+    <button id='panel-toggle' onclick='togglePanel()'>&#x2630; Mugs</button>
+    <div id='modal-overlay' onclick='closeModal()'></div>
+    <div id='mug-modal'>
+        <div style='padding: 12px 16px; background: #00704A; color: white; font-weight: bold; border-radius: 8px 8px 0 0;'>
+            <span id='modal-title'>Mug Name</span>
+            <span onclick='closeModal()' style='float: right; cursor: pointer; font-size: 18px;'>&times;</span>
+        </div>
+        <div style='padding: 16px;'>
+            <img id='modal-img' src='' style='width: 100%; max-height: 200px; object-fit: contain; margin-bottom: 12px;'>
+            <p id='modal-desc' style='font-size: 14px; color: #666; margin: 0 0 12px 0;'></p>
+            <div style='display: flex; gap: 8px;'>
+                <button onclick='viewOnMap()' style='flex: 1; padding: 10px; background: #00704A; color: white; border: none; border-radius: 4px; cursor: pointer;'>View on Map</button>
+                <a id='modal-link' href='' target='_blank' style='flex: 1; padding: 10px; background: #1e3932; color: white; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; text-align: center;'>More Info</a>
+            </div>
+        </div>
+    </div>
+    <div id='mug-panel' style='position: fixed; top: 0; right: 0; width: 280px; height: 100vh; background: white; z-index: 9999; box-shadow: -2px 0 8px rgba(0,0,0,0.15); display: flex; flex-direction: column;'>
+        <div style='padding: 12px; background: #00704A; color: white; font-weight: bold; font-size: 16px;'>
+            Mug Collection ({owned_count}/{total_count})
+        </div>
+        <input type='text' id='mug-search' placeholder='Search mugs...' style='margin: 8px 8px 4px 8px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;' onkeyup='filterMugs()'>
+        <div style='display: flex; margin: 4px 8px 8px 8px; gap: 4px;'>
+            <button class='filter-btn active' onclick='setFilter("all")'>All</button>
+            <button class='filter-btn' onclick='setFilter("owned")'>Owned</button>
+            <button class='filter-btn' onclick='setFilter("not-owned")'>Not Owned</button>
+        </div>
+        <div id='mug-list' style='flex: 1; overflow-y: auto; font-size: 14px;'>
+            {''.join(mug_items)}
+        </div>
+        <div style='padding: 8px; background: #f5f5f5; font-size: 12px; text-align: center;'>
+            &#x2705; = Owned &nbsp; &#x25CB; = Not Owned
+        </div>
+    </div>
+    <script>
+    var mugData = {{{', '.join(mug_data_js)}}};
+    var currentMug = null;
+    var currentFilter = 'all';
+
+    function filterMugs() {{
+        var input = document.getElementById('mug-search').value.toLowerCase();
+        var items = document.querySelectorAll('.mug-item');
+        items.forEach(function(item) {{
+            var text = item.textContent.toLowerCase();
+            var matchesSearch = text.includes(input);
+            var matchesFilter = currentFilter === 'all' || item.classList.contains(currentFilter);
+            item.style.display = (matchesSearch && matchesFilter) ? '' : 'none';
+        }});
+    }}
+
+    function setFilter(filter) {{
+        currentFilter = filter;
+        document.querySelectorAll('.filter-btn').forEach(function(btn) {{
+            btn.classList.remove('active');
+        }});
+        event.target.classList.add('active');
+        filterMugs();
+    }}
+
+    function showMug(name) {{
+        currentMug = name;
+        var mug = mugData[name];
+        document.getElementById('modal-title').textContent = name;
+        if (mug) {{
+            document.getElementById('modal-img').src = mug.img || '';
+            document.getElementById('modal-img').style.display = mug.img ? '' : 'none';
+            document.getElementById('modal-desc').textContent = mug.desc || '';
+            document.getElementById('modal-link').href = mug.url || '#';
+        }}
+        document.getElementById('modal-overlay').style.display = 'block';
+        document.getElementById('mug-modal').style.display = 'block';
+    }}
+
+    function closeModal() {{
+        document.getElementById('modal-overlay').style.display = 'none';
+        document.getElementById('mug-modal').style.display = 'none';
+    }}
+
+    function viewOnMap() {{
+        var mug = mugData[currentMug];
+        if (mug && mug.lat) {{
+            var mapObj = Object.values(window).find(v => v && v._leaflet_id && v.setView);
+            if (mapObj) {{
+                mapObj.setView([mug.lat, mug.lng], 10);
+            }}
+        }}
+        closeModal();
+    }}
+
+    function togglePanel() {{
+        var panel = document.getElementById('mug-panel');
+        var toggle = document.getElementById('panel-toggle');
+        panel.classList.toggle('collapsed');
+        toggle.classList.toggle('collapsed');
+        if (panel.classList.contains('collapsed')) {{
+            toggle.innerHTML = '&#x2630; Mugs';
+        }} else {{
+            toggle.innerHTML = '&times; Hide';
+        }}
+    }}
+    </script>
+    """
+
     m.get_root().html.add_child(folium.Element(header_html))
     m.get_root().html.add_child(folium.Element(legend_html))
     m.get_root().html.add_child(folium.Element(footer_html))
+    m.get_root().html.add_child(folium.Element(panel_html))
 
     m.save(output_path)
 
