@@ -133,6 +133,7 @@ def visualize(data_path, output_path="index.html"):
                     <li>Must have visited the location and outside of the airport. i.e. layovers don't count.</li>
                     <li>You MAY ask a friend, not a stranger, to pick it up for you, as long as both of you follow the previous two criteria. They must bring it to you personally.</li>
                 </ul>
+                <p style='margin: 8px 0 0 0; font-size: 12px; color: #666; font-style: italic;'>Note: This has become a family thing, so I have extended some leniency to my immediate family on the rules.</p>
             </div>
             <a href='https://github.com/andorsk/starbucks-mugs' target='_blank' style='display: block; padding: 10px; background: #1e3932; color: white; text-align: center; border-radius: 4px; text-decoration: none;'>Clone on GitHub</a>
         </div>
